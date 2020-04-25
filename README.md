@@ -1,4 +1,4 @@
-#masters_program
+# Master projects
 
 ## Real time Operating systems
 
