@@ -1,0 +1,115 @@
+Body: rear_left_wheel_link
+COM: rear_left_wheel_link -29.828180706194853 16.701640907724826 7.372968583127009
+exporting stl of rear_left_wheel_link
+Body: rear_left_corner_link
+COM: rear_left_corner_link -29.823602734407125 11.806712931852973 12.519921872608565
+exporting stl of rear_left_corner_link
+Body: center_left_wheel_link
+COM: center_left_wheel_link 1.5131416310382106 24.34701669989546 7.374346017554385
+exporting stl of center_left_wheel_link
+Body: front_left_wheel_link
+COM: front_left_wheel_link 29.499390188768405 16.701641562479757 7.339150887228195
+exporting stl of front_left_wheel_link
+Body: front_left_corner_link
+COM: front_left_corner_link 29.318154225819608 11.806830642932225 12.482992098545237
+exporting stl of front_left_corner_link
+Body: front_left_rocker_bogie_link
+COM: front_left_rocker_bogie_link 13.327395996080982 16.578920390166445 20.352504425521207
+exporting stl of front_left_rocker_bogie_link
+Body: rear_left_rocker_bogie_link
+COM: rear_left_rocker_bogie_link -10.330501973335616 16.1123248910008 25.656460528530932
+exporting stl of rear_left_rocker_bogie_link
+Body: rear_right_wheel_link
+COM: rear_right_wheel_link -29.828170460347657 -16.700994573202205 7.372396581486636
+exporting stl of rear_right_wheel_link
+Body: rear_right_corner_link
+COM: rear_right_corner_link -29.823602734407114 -11.80671293185262 12.519921872608602
+exporting stl of rear_right_corner_link
+Body: center_right_wheel_link
+COM: center_right_wheel_link 1.5131726404942554 -24.34637037409263 7.373774767105344
+exporting stl of center_right_wheel_link
+Body: front_right_wheel_link
+COM: front_right_wheel_link 29.499421171348413 -16.700995227838643 7.338579633474491
+exporting stl of front_right_wheel_link
+Body: front_right_corner_link
+COM: front_right_corner_link 29.318154225819512 -11.80683064293183 12.482992098545125
+exporting stl of front_right_corner_link
+Body: front_right_rocker_bogie_link
+COM: front_right_rocker_bogie_link 13.327642860788943 -16.578923965251292 20.352617248197845
+exporting stl of front_right_rocker_bogie_link
+Body: rear_right_rocker_bogie_link
+COM: rear_right_rocker_bogie_link -10.330750085208683 -16.112306491365054 25.656459028078782
+exporting stl of rear_right_rocker_bogie_link
+Body: camera_link
+COM: camera_link -1.3482929898247258 0.005539273924810687 81.5892884241851
+exporting stl of camera_link
+Body: camera_mast_link
+COM: camera_mast_link -0.8587236364997302 0.00021579019463632365 66.59068334479375
+exporting stl of camera_mast_link
+Body: base_link
+COM: base_link -13.448828386257851 0.486903715351535 29.88377096748906
+exporting stl of base_link
+Joint: EXPORT_rear_right_wheel_joint
+	parent: rear_right_corner_link
+	child: rear_right_wheel_link
+	pos: 0.16661284784155939	0.6999561550421944	0.12753559574907758
+Joint: EXPORT_rear_left_corner_joint
+	parent: rear_left_rocker_bogie_link
+	child: rear_left_corner_link
+	pos: -0.3292689363615082	4.2882870681471825	10.230198044656921
+Joint: EXPORT_left_rocker_bogie_joint
+	parent: rear_left_rocker_bogie_link
+	child: front_left_rocker_bogie_link
+	pos: -5.876162542352361	1.7766796098336073	-2.115232733151508
+Joint: EXPORT_left_chassis_joint
+	parent: base_link
+	child: rear_left_rocker_bogie_link
+	pos: -0.9439864448251338	1.887675108999364	2.7739590740164743
+Joint: EXPORT_right_chassis_joint
+	parent: base_link
+	child: rear_right_rocker_bogie_link
+	pos: -0.943738332952087	-1.8876935086347792	2.7739605744686067
+Joint: EXPORT_camera_mast_joint
+	parent: base_link
+	child: camera_mast_link
+	pos: 1.0169537940190039	7.252895275469337e-10	-32.33633872954112
+Joint: EXPORT_rear_right_corner_joint
+	parent: rear_right_rocker_bogie_link
+	child: rear_right_corner_link
+	pos: -0.32926893636154375	-4.288287068147213	10.230198044656845
+Joint: EXPORT_right_rocker_bogie_joint
+	parent: rear_right_rocker_bogie_link
+	child: front_right_rocker_bogie_link
+	pos: -5.876409407060345	-1.77667603474843	-2.115345555828199
+Joint: EXPORT_center_right_wheel_joint
+	parent: front_right_rocker_bogie_link
+	child: center_right_wheel_link
+	pos: 0.1619859675881905	0.6999319559324917	0.13350041778546462
+Joint: EXPORT_front_right_corner_joint
+	parent: front_right_rocker_bogie_link
+	child: front_right_corner_link
+	pos: -0.6988137892667154	-4.288169357067927	10.211537686741604
+Joint: EXPORT_rear_left_wheel_joint
+	parent: rear_left_corner_link
+	child: rear_left_wheel_link
+	pos: 0.16662309368875583	-0.700602489564492	0.1269635941086884
+Joint: EXPORT_front_left_wheel_joint
+	parent: front_left_corner_link
+	child: front_left_wheel_link
+	pos: 0.16212178801983512	-0.7006031443195013	0.13291214359585624
+Joint: EXPORT_front_right_wheel_joint
+	parent: front_right_corner_link
+	child: front_right_wheel_link
+	pos: 0.16209080543987042	0.6999568096786959	0.13348339734948667
+Joint: EXPORT_center_left_wheel_joint
+	parent: front_left_rocker_bogie_link
+	child: center_left_wheel_link
+	pos: 0.16201697704425877	-0.7005782817350301	0.13292916733647875
+Joint: EXPORT_front_left_corner_joint
+	parent: front_left_rocker_bogie_link
+	child: front_left_corner_link
+	pos: -0.6988137892667936	4.288169357067863	10.21153768674156
+Joint: EXPORT_camera_joint
+	parent: camera_mast_link
+	child: camera_link
+	pos: 0.07733396741391507	-8.055323483004882	-1.8574067080057262

@@ -1,0 +1,8 @@
+<launch>
+ 
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_odom" clear_params="true">
+  <rosparam command="load" file="/home/nvidia/catkin_ws/src/beetle/beetle_localzation_node/config/config.yaml"/>
+  <!--<remap from="/odometry/filtered" to="/beetle_odometry/filtered"/>-->
+  </node>
+
+</launch>

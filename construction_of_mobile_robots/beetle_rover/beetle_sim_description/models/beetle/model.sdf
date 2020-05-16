@@ -1,0 +1,757 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+	<model name="beetle">
+		<link name="rear_left_wheel_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.29828180706194857 0.16701640907724827 0.0737296858312701 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.043725231597376</mass>
+				<inertia>
+					<ixx>0.0746738734124826</ixx>
+					<ixy>0.10181266464888324</ixy>
+					<ixz>-0.025166443959839097</ixz>
+					<iyy>0.20225284982598843</iyy>
+					<iyz>0.04505992943336661</iyz>
+					<izz>0.24533609116251942</izz>
+				</inertia>
+			</inertial>
+			<collision name="rear_left_wheel_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_left_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="rear_left_wheel_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_left_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="rear_left_corner_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.29823602734407123 0.11806712931852972 0.12519921872608566 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.2210132081934555</mass>
+				<inertia>
+					<ixx>0.0075258022226624395</ixx>
+					<ixy>0.007784747732584186</ixy>
+					<ixz>-0.0033425094329746123</ixz>
+					<iyy>0.023920791469126526</iyy>
+					<iyz>0.008275787660172082</iyz>
+					<izz>0.022995355900298418</izz>
+				</inertia>
+			</inertial>
+			<collision name="rear_left_corner_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_left_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="rear_left_corner_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_left_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="center_left_wheel_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.015131416310382107 0.2434701669989546 0.07374346017554385 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.0437270859984764</mass>
+				<inertia>
+					<ixx>0.13880876289980676</ixx>
+					<ixy>-0.007531100506247499</ixy>
+					<ixz>-0.036693734635255236</ixz>
+					<iyy>0.02088996629598762</iyy>
+					<iyz>-0.0021648022612260837</iyz>
+					<izz>0.12811640071205482</izz>
+				</inertia>
+			</inertial>
+			<collision name="center_left_wheel_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/center_left_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="center_left_wheel_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/center_left_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="front_left_wheel_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.29499390188768404 0.16701641562479758 0.07339150887228195 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.043727045506392</mass>
+				<inertia>
+					<ixx>0.07456396781137574</ixx>
+					<ixy>-0.10069424178314057</ixy>
+					<ixz>-0.025051102363371384</ixz>
+					<iyy>0.19816477038685262</iyy>
+					<iyz>-0.04413125265487558</iyz>
+					<izz>0.2413580292791333</izz>
+				</inertia>
+			</inertial>
+			<collision name="front_left_wheel_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_left_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="front_left_wheel_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_left_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="front_left_corner_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.2931815422581961 0.11806830642932224 0.12482992098545237 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.22101736205093958</mass>
+				<inertia>
+					<ixx>0.007502980451765577</ixx>
+					<ixy>-0.007645428538318532</ixy>
+					<ixz>-0.0033328496534462105</ixz>
+					<iyy>0.023240150629810795</iyy>
+					<iyz>-0.008039273386966628</iyz>
+					<izz>0.022337806813265405</izz>
+				</inertia>
+			</inertial>
+			<collision name="front_left_corner_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_left_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="front_left_corner_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_left_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="front_left_rocker_bogie_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.13327395996080982 0.16578920390166446 0.2035250442552121 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.8445676376518956</mass>
+				<inertia>
+					<ixx>0.06277874581658051</ixx>
+					<ixy>-0.018225666823205547</ixy>
+					<ixz>-0.027993579038419338</ixz>
+					<iyy>0.0625707398780842</iyy>
+					<iyz>-0.027586336774433586</iyz>
+					<izz>0.04707546758213575</izz>
+				</inertia>
+			</inertial>
+			<collision name="front_left_rocker_bogie_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_left_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="front_left_rocker_bogie_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_left_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="rear_left_rocker_bogie_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.10330501973335617 0.161123248910008 0.25656460528530933 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.909645424954701</mass>
+				<inertia>
+					<ixx>0.08532861005297555</ixx>
+					<ixy>0.015169448278743778</ixy>
+					<ixz>-0.03760121707003846</ixz>
+					<iyy>0.08780317442619136</iyy>
+					<iyz>0.026524480712805516</iyz>
+					<izz>0.050332437137122966</izz>
+				</inertia>
+			</inertial>
+			<collision name="rear_left_rocker_bogie_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_left_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="rear_left_rocker_bogie_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_left_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="rear_right_wheel_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.2982817046034766 -0.16700994573202205 0.07372396581486636 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.044451252660024</mass>
+				<inertia>
+					<ixx>0.07469406824081799</ixx>
+					<ixy>-0.10184477562870979</ixy>
+					<ixz>0.025172793659822952</ixz>
+					<iyy>0.20232289121514832</iyy>
+					<iyz>0.04507241398756659</iyz>
+					<izz>0.2454185582224127</izz>
+				</inertia>
+			</inertial>
+			<collision name="rear_right_wheel_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_right_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="rear_right_wheel_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_right_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="rear_right_corner_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.2982360273440711 -0.1180671293185262 0.12519921872608603 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.22101320819345527</mass>
+				<inertia>
+					<ixx>0.0075258022226623155</ixx>
+					<ixy>-0.007784747732583991</ixy>
+					<ixz>0.003342509432974542</ixz>
+					<iyy>0.023920791469126637</iyy>
+					<iyz>0.008275787660172139</iyz>
+					<izz>0.022995355900298334</izz>
+				</inertia>
+			</inertial>
+			<collision name="rear_right_corner_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_right_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="rear_right_corner_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_right_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="center_right_wheel_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.015131726404942553 -0.2434637037409263 0.07373774767105344 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.044453107769063</mass>
+				<inertia>
+					<ixx>0.13884972412083063</ixx>
+					<ixy>0.007533798765844787</ixy>
+					<ixz>0.03670329151928735</ixz>
+					<iyy>0.020895725910412718</iyy>
+					<iyz>-0.0021654619527637217</iyz>
+					<izz>0.12815534858815897</izz>
+				</inertia>
+			</inertial>
+			<collision name="center_right_wheel_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/center_right_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="center_right_wheel_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/center_right_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="front_right_wheel_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.2949942117134841 -0.16700995227838644 0.07338579633474492 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.0444530672746373</mass>
+				<inertia>
+					<ixx>0.07458413517596313</ixx>
+					<ixy>0.10072628893577579</ixy>
+					<ixz>0.025057420807144456</ixz>
+					<iyy>0.19823386834617238</iyy>
+					<iyz>-0.0441435518299059</iyz>
+					<izz>0.24143958040629396</izz>
+				</inertia>
+			</inertial>
+			<collision name="front_right_wheel_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_right_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="front_right_wheel_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_right_wheel_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="front_right_corner_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.29318154225819515 -0.1180683064293183 0.12482992098545126 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.22101736205093941</mass>
+				<inertia>
+					<ixx>0.0075029804517652956</ixx>
+					<ixy>0.0076454285383182625</ixy>
+					<ixz>0.0033328496534460656</ixz>
+					<iyy>0.02324015062981061</iyy>
+					<iyz>-0.008039273386966521</iyz>
+					<izz>0.02233780681326509</izz>
+				</inertia>
+			</inertial>
+			<collision name="front_right_corner_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_right_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="front_right_corner_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_right_corner_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="front_right_rocker_bogie_link">
+			<self_collide>false</self_collide>
+			<pose frame="">0.13327642860788944 -0.1657892396525129 0.20352617248197846 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.8445809006011908</mass>
+				<inertia>
+					<ixx>0.0627801473161565</ixx>
+					<ixy>0.01822631425280775</ixy>
+					<ixz>0.02799418809032146</ixz>
+					<iyy>0.06257288491107471</iyy>
+					<iyz>-0.027587399443392186</iyz>
+					<izz>0.0470769630960935</izz>
+				</inertia>
+			</inertial>
+			<collision name="front_right_rocker_bogie_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_right_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="front_right_rocker_bogie_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/front_right_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="rear_right_rocker_bogie_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.10330750085208683 -0.16112306491365055 0.2565645902807878 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>0.909662036731427</mass>
+				<inertia>
+					<ixx>0.08533010423763508</ixx>
+					<ixy>-0.015170007379640263</ixy>
+					<ixz>0.037601862212452715</ixz>
+					<iyy>0.08780572228631979</iyy>
+					<iyz>0.02652559625120754</iyz>
+					<izz>0.050334217754120406</izz>
+				</inertia>
+			</inertial>
+			<collision name="rear_right_rocker_bogie_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_right_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="rear_right_rocker_bogie_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/rear_right_rocker_bogie_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="camera_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.013482929898247259 5.5392739248106876e-05 0.815892884241851 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.330581194890767</mass>
+				<inertia>
+					<ixx>1.5581916852701763</ixx>
+					<ixy>1.547810564267169e-06</ixy>
+					<ixz>-9.99668446917764e-05</ixz>
+					<iyy>1.5534372776785443</iyy>
+					<iyz>0.025679666342472138</iyz>
+					<izz>0.006221999741365755</izz>
+				</inertia>
+			</inertial>
+			<collision name="camera_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/camera_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="camera_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/camera_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="camera_mast_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.008587236364997301 2.1579019463632367e-06 0.6659068334479374 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>3.1248105350339057</mass>
+				<inertia>
+					<ixx>1.4164659310174033</ixx>
+					<ixy>5.7906490147450536e-08</ixy>
+					<ixz>-4.490232017620334e-06</ixz>
+					<iyy>1.4137891897013357</iyy>
+					<iyz>0.018603956680717276</iyz>
+					<izz>0.007776633228713614</izz>
+				</inertia>
+			</inertial>
+			<collision name="camera_mast_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/camera_mast_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="camera_mast_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/camera_mast_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="base_link">
+			<self_collide>false</self_collide>
+			<pose frame="">-0.13448828386257852 0.00486903715351535 0.2988377096748906 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>2.914500428469798</mass>
+				<inertia>
+					<ixx>0.282551972755833</ixx>
+					<ixy>0.0035710968000186223</ixy>
+					<ixz>-0.0037509260143349424</ixz>
+					<iyy>0.3606061435533601</iyy>
+					<iyz>0.11070144422781696</iyz>
+					<izz>0.10756603542751796</izz>
+				</inertia>
+			</inertial>
+			<collision name="base_link_collision">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/base_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="base_link_visual">
+				<geometry>
+					<mesh>
+						<uri>model://beetle_sim_description/meshes/CAD/base_link.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<joint name="rear_right_wheel_joint" type="revolute">
+			<parent>rear_right_corner_link</parent>
+			<child>rear_right_wheel_link</child>
+			<pose frame="">0.0016661284784155938 0.006999561550421945 0.0012753559574907758 0 0 0</pose>
+			<axis>
+				<xyz>-1.168180726783036e-14 1.000000000000002 8.988123130726531e-16</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="rear_left_corner_joint" type="revolute">
+			<parent>rear_left_rocker_bogie_link</parent>
+			<child>rear_left_corner_link</child>
+			<pose frame="">-0.003292689363615082 0.04288287068147183 0.10230198044656921 0 0 0</pose>
+			<axis>
+				<xyz>-0.03220021223242525 2.39075153972743e-15 0.9994814387131885</xyz>
+				<limit>
+					<lower>-0.7853981633974483</lower>
+					<upper>0.7853981633974483</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="left_rocker_bogie_joint" type="revolute">
+			<parent>rear_left_rocker_bogie_link</parent>
+			<child>front_left_rocker_bogie_link</child>
+			<pose frame="">-0.05876162542352361 0.017766796098336073 -0.02115232733151508 0 0 0</pose>
+			<axis>
+				<xyz>-1.4927285632756729e-15 -0.9999999999999991 -1.4646903240671397e-15</xyz>
+				<limit>
+					<lower>-0.6981317007977318</lower>
+					<upper>0.6981317007977318</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="left_chassis_joint" type="revolute">
+			<parent>base_link</parent>
+			<child>rear_left_rocker_bogie_link</child>
+			<pose frame="">-0.009439864448251338 0.01887675108999364 0.027739590740164743 0 0 0</pose>
+			<axis>
+				<xyz>1.5239000423142688e-15 1.0000000000000007 1.8481738701997683e-15</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="right_chassis_joint" type="revolute">
+			<parent>base_link</parent>
+			<child>rear_right_rocker_bogie_link</child>
+			<pose frame="">-0.00943738332952087 -0.018876935086347794 0.027739605744686067 0 0 0</pose>
+			<axis>
+				<xyz>1.4043094431469825e-15 -1.0000000000000007 3.7029412529260255e-15</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="camera_mast_joint" type="revolute">
+			<parent>base_link</parent>
+			<child>camera_mast_link</child>
+			<pose frame="">0.01016953794019004 7.252895275469337e-12 -0.3233633872954112 0 0 0</pose>
+			<axis>
+				<xyz>0.0314107590781289 2.873375309408031e-14 -0.9995065603657315</xyz>
+				<limit>
+					<lower>-1.3962634015954636</lower>
+					<upper>1.3962634015954636</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="rear_right_corner_joint" type="revolute">
+			<parent>rear_right_rocker_bogie_link</parent>
+			<child>rear_right_corner_link</child>
+			<pose frame="">-0.003292689363615438 -0.042882870681472125 0.10230198044656845 0 0 0</pose>
+			<axis>
+				<xyz>0.032200212232424814 6.636537155423456e-16 -0.9994814387131883</xyz>
+				<limit>
+					<lower>-0.7853981633974483</lower>
+					<upper>0.7853981633974483</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="right_rocker_bogie_joint" type="revolute">
+			<parent>rear_right_rocker_bogie_link</parent>
+			<child>front_right_rocker_bogie_link</child>
+			<pose frame="">-0.058764094070603456 -0.0177667603474843 -0.02115345555828199 0 0 0</pose>
+			<axis>
+				<xyz>1.4858013022184583e-15 -0.9999999999999989 3.1924610439838186e-15</xyz>
+				<limit>
+					<lower>-0.6981317007977318</lower>
+					<upper>0.6981317007977318</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="center_right_wheel_joint" type="revolute">
+			<parent>front_right_rocker_bogie_link</parent>
+			<child>center_right_wheel_link</child>
+			<pose frame="">0.001619859675881905 0.006999319559324917 0.0013350041778546463 0 0 0</pose>
+			<axis>
+				<xyz>-2.2363514929177995e-15 1.0000000000000002 -1.1115446551663008e-15</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="front_right_corner_joint" type="revolute">
+			<parent>front_right_rocker_bogie_link</parent>
+			<child>front_right_corner_link</child>
+			<pose frame="">-0.006988137892667155 -0.04288169357067927 0.10211537686741604 0 0 0</pose>
+			<axis>
+				<xyz>-0.06830283850784338 5.516552797917166e-16 0.9976646341590826</xyz>
+				<limit>
+					<lower>-0.7853981633974483</lower>
+					<upper>0.7853981633974483</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="rear_left_wheel_joint" type="revolute">
+			<parent>rear_left_corner_link</parent>
+			<child>rear_left_wheel_link</child>
+			<pose frame="">0.0016662309368875583 -0.00700602489564492 0.001269635941086884 0 0 0</pose>
+			<axis>
+				<xyz>1.1802903556327102e-14 1.000000000000002 -1.1036896224302837e-15</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="front_left_wheel_joint" type="revolute">
+			<parent>front_left_corner_link</parent>
+			<child>front_left_wheel_link</child>
+			<pose frame="">0.0016212178801983512 -0.007006031443195013 0.0013291214359585624 0 0 0</pose>
+			<axis>
+				<xyz>6.0689537978912165e-15 1.0000000000000016 -1.6342298691262379e-15</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="front_right_wheel_joint" type="revolute">
+			<parent>front_right_corner_link</parent>
+			<child>front_right_wheel_link</child>
+			<pose frame="">0.0016209080543987042 0.006999568096786959 0.0013348339734948666 0 0 0</pose>
+			<axis>
+				<xyz>-5.8998681256659766e-15 1.0000000000000022 -8.809664681657637e-17</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="center_left_wheel_joint" type="revolute">
+			<parent>front_left_rocker_bogie_link</parent>
+			<child>center_left_wheel_link</child>
+			<pose frame="">0.0016201697704425876 -0.0070057828173503015 0.0013292916733647876 0 0 0</pose>
+			<axis>
+				<xyz>2.405437165143042e-15 1.0000000000000002 -6.107818607765088e-16</xyz>
+				<limit>
+					<lower>0.0</lower>
+					<upper>0.0</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="front_left_corner_joint" type="revolute">
+			<parent>front_left_rocker_bogie_link</parent>
+			<child>front_left_corner_link</child>
+			<pose frame="">-0.006988137892667936 0.042881693570678635 0.10211537686741559 0 0 0</pose>
+			<axis>
+				<xyz>0.06830283850784376 -1.1781980050028453e-15 -0.9976646341590827</xyz>
+				<limit>
+					<lower>-0.7853981633974483</lower>
+					<upper>0.7853981633974483</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+		<joint name="camera_joint" type="revolute">
+			<parent>camera_mast_link</parent>
+			<child>camera_link</child>
+			<pose frame="">0.0007733396741391507 -0.08055323483004882 -0.018574067080057263 0 0 0</pose>
+			<axis>
+				<xyz>3.521828755832818e-17 1.0000000000000013 -4.156409704356744e-15</xyz>
+				<limit>
+					<lower>-1.0471975511965976</lower>
+					<upper>1.0471975511965976</upper>
+				</limit>
+				<use_parent_model_frame>0</use_parent_model_frame>
+			</axis>
+		</joint>
+	</model>
+</sdf>

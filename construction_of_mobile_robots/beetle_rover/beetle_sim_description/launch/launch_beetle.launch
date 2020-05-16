@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+   <include file="$(find beetle_sim_description)/launch/move.launch"/>
+   <include file="$(find beetle_localization_node)/launch/start.launch"/>
+   <include file="$(find zed_wrapper)/launch/zed.launch"/>
+
+   <node pkg="beetle_kinematic_model" type="beetle_kinematic_model.py" name="beetle_kinematic_model"/>
+   <node pkg="beetle_control" type="beetle_control.py" name="beetle_control"/>
+   <node pkg="beetle_wheel_odometry" type="beetle_wheel_odometry.py" name="beetle_wheel_odometry"/>
+   <node pkg="beetle_imu" type="ros_serial_publisher.py" name="ros_serial_publisher"/>
+   <node pkg="joy" type="joy_node.py" name="joy_node"/>
+   <node pkg="teleop_twist_joy" type="teleop_twist_joy.py" name="joy_node"/>
+   <node pkg="beetle_tf_node" type="beetle_tf_node.py" name="beetle_tf_node"/>
+</launch>

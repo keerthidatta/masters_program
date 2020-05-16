@@ -1,0 +1,500 @@
+<?xml version="1.0" ?>
+<robot name="beetle">
+  <joint name="beetle__rear_right_wheel_joint" type="continuous">
+    <parent link="beetle__rear_right_corner_link"/>
+    <child link="beetle__rear_right_wheel_link"/>
+    <origin rpy="0 0 0" xyz="0.00491  0.00094 -0.1525"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="beetle__rear_left_corner_joint" type="revolute">
+    <parent link="beetle__rear_left_rocker_bogie_link"/>
+    <child link="beetle__rear_left_corner_link"/>
+    <origin rpy="0 0 0" xyz="-0.18878 -0.01905 -0.0568"/>
+    <axis xyz="-0.0322   0       0.99948"/>
+    <limit effort="0.0" lower="-0.785398163397" upper="0.785398163397" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__left_rocker_bogie_joint" type="revolute">
+    <parent link="beetle__rear_left_rocker_bogie_link"/>
+    <child link="beetle__front_left_rocker_bogie_link"/>
+    <origin rpy="0 0 0" xyz="0.18725  0.00355 -0.10193"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="0.0" lower="-0.698131700798" upper="0.698131700798" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__left_chassis_joint" type="fixed">
+    <parent link="beetle__base_link"/>
+    <child link="beetle__rear_left_rocker_bogie_link"/>
+    <origin rpy="0 0 0" xyz="-0.11274  0.18     0.2843"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__right_chassis_joint" type="fixed">
+    <parent link="beetle__base_link"/>
+    <child link="beetle__rear_right_rocker_bogie_link"/>
+    <origin rpy="0 0 0" xyz="-0.11274 -0.18     0.2843"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__camera_mast_joint" type="revolute">
+    <parent link="beetle__base_link"/>
+    <child link="beetle__camera_mast_link"/>
+    <origin rpy="0 0 0" xyz="0.00158 0      0.34254"/>
+    <axis xyz="0.03141  0      -0.9995"/>
+    <limit effort="0.0" lower="-1.3962634016" upper="1.3962634016" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__rear_right_corner_joint" type="revolute">
+    <parent link="beetle__rear_right_rocker_bogie_link"/>
+    <child link="beetle__rear_right_corner_link"/>
+    <origin rpy="0 0 0" xyz="-0.18878  0.01905 -0.0568"/>
+    <axis xyz="0.0322   0      -0.99948"/>
+    <limit effort="0.0" lower="-0.785398163397" upper="0.785398163397" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__right_rocker_bogie_joint" type="revolute">
+    <parent link="beetle__rear_right_rocker_bogie_link"/>
+    <child link="beetle__front_right_rocker_bogie_link"/>
+    <origin rpy="0 0 0" xyz="0.18725 -0.00355 -0.10193"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="0.0" lower="-0.698131700798" upper="0.698131700798" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__center_right_wheel_joint" type="continuous">
+    <parent link="beetle__front_right_rocker_bogie_link"/>
+    <child link="beetle__center_right_wheel_link"/>
+    <origin rpy="0 0 0" xyz="-0.05776 -0.0529  -0.1073"/>
+    <axis xyz="0 1 0"/>
+
+  </joint>
+  <joint name="beetle__front_right_corner_joint" type="revolute">
+    <parent link="beetle__front_right_rocker_bogie_link"/>
+    <child link="beetle__front_right_corner_link"/>
+    <origin rpy="0 0 0" xyz="0.21168 0.0226  0.04457"/>
+    <axis xyz="-0.0683   0       0.99766"/>
+    <limit effort="0.0" lower="-0.785398163397" upper="0.785398163397" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__rear_left_wheel_joint" type="continuous">
+    <parent link="beetle__rear_left_corner_link"/>
+    <child link="beetle__rear_left_wheel_link"/>
+    <origin rpy="0 0 0" xyz="0.00491 -0.00094 -0.1525"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="beetle__front_left_wheel_joint" type="continuous">
+    <parent link="beetle__front_left_corner_link"/>
+    <child link="beetle__front_left_wheel_link"/>
+    <origin rpy="0 0 0" xyz="0.01042 -0.00094 -0.15222"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="beetle__front_right_wheel_joint" type="continuous">
+    <parent link="beetle__front_right_corner_link"/>
+    <child link="beetle__front_right_wheel_link"/>
+    <origin rpy="0 0 0" xyz="0.01042  0.00094 -0.15222"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="beetle__center_left_wheel_joint" type="continuous">
+    <parent link="beetle__front_left_rocker_bogie_link"/>
+    <child link="beetle__center_left_wheel_link"/>
+    <origin rpy="0 0 0" xyz="-0.05776  0.0529  -0.1073"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="beetle__front_left_corner_joint" type="revolute">
+    <parent link="beetle__front_left_rocker_bogie_link"/>
+    <child link="beetle__front_left_corner_link"/>
+    <origin rpy="0 0 0" xyz="0.21168 -0.0226   0.04457"/>
+    <axis xyz="0.0683   0      -0.99766"/>
+    <limit effort="0.0" lower="-0.785398163397" upper="0.785398163397" velocity="0.0"/>
+  </joint>
+  <joint name="beetle__camera_joint" type="revolute">
+    <parent link="beetle__camera_mast_link"/>
+    <child link="beetle__camera_link"/>
+    <origin rpy="0 0 0" xyz="-0.01429 -0.0805   0.45477"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="0.0" lower="-1.0471975512" upper="1.0471975512" velocity="0.0"/>
+  </joint>
+  <link name="beetle__rear_left_wheel_link">
+    <inertial>
+      <mass value="2.043725231597376"/>
+      <origin rpy="0 0 0" xyz="-0.00166  0.007   -0.00127"/>
+      <inertia ixx="0.0746738734124826" ixy="0.10181266464888324" ixz="-0.025166443959839097" iyy="0.20225284982598843" iyz="0.04505992943336661" izz="0.24533609116251942"/>
+    </inertial>
+    <collision name="beetle__rear_left_wheel_link_collision">
+      <origin rpy="0 0 0" xyz="-0.00166  0.007   -0.00127"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_left_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__rear_left_wheel_link_visual">
+      <origin rpy="0 0 0" xyz="-0.00166  0.007   -0.00127"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_left_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__rear_left_corner_link">
+    <inertial>
+      <mass value="0.2210132081934555"/>
+      <origin rpy="0 0 0" xyz="0.00329 -0.04288 -0.1023"/>
+      <inertia ixx="0.0075258022226624395" ixy="0.007784747732584186" ixz="-0.0033425094329746123" iyy="0.023920791469126526" iyz="0.008275787660172082" izz="0.022995355900298418"/>
+    </inertial>
+    <collision name="beetle__rear_left_corner_link_collision">
+      <origin rpy="0 0 0" xyz="0.00329 -0.04288 -0.1023"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_left_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__rear_left_corner_link_visual">
+      <origin rpy="0 0 0" xyz="0.00329 -0.04288 -0.1023"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_left_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__center_left_wheel_link">
+    <inertial>
+      <mass value="2.0437270859984764"/>
+      <origin rpy="0 0 0" xyz="-0.00162  0.007   -0.00132"/>
+      <inertia ixx="0.13880876289980676" ixy="-0.007531100506247499" ixz="-0.036693734635255236" iyy="0.02088996629598762" iyz="-0.0021648022612260837" izz="0.12811640071205482"/>
+    </inertial>
+    <collision name="beetle__center_left_wheel_link_collision">
+      <origin rpy="0 0 0" xyz="-0.00162  0.007   -0.00132"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/center_left_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__center_left_wheel_link_visual">
+      <origin rpy="0 0 0" xyz="-0.00162  0.007   -0.00132"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/center_left_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__front_left_wheel_link">
+    <inertial>
+      <mass value="2.043727045506392"/>
+      <origin rpy="0 0 0" xyz="-0.00162  0.007   -0.00132"/>
+      <inertia ixx="0.07456396781137574" ixy="-0.10069424178314057" ixz="-0.025051102363371384" iyy="0.19816477038685262" iyz="-0.04413125265487558" izz="0.2413580292791333"/>
+    </inertial>
+    <collision name="beetle__front_left_wheel_link_collision">
+      <origin rpy="0 0 0" xyz="-0.00162  0.007   -0.00132"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_left_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__front_left_wheel_link_visual">
+      <origin rpy="0 0 0" xyz="-0.00162  0.007   -0.00132"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_left_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__front_left_corner_link">
+    <inertial>
+      <mass value="0.22101736205093958"/>
+      <origin rpy="0 0 0" xyz="0.00698 -0.04288 -0.10211"/>
+      <inertia ixx="0.007502980451765577" ixy="-0.007645428538318532" ixz="-0.0033328496534462105" iyy="0.023240150629810795" iyz="-0.008039273386966628" izz="0.022337806813265405"/>
+    </inertial>
+    <collision name="beetle__front_left_corner_link_collision">
+      <origin rpy="0 0 0" xyz="0.00698 -0.04288 -0.10211"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_left_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__front_left_corner_link_visual">
+      <origin rpy="0 0 0" xyz="0.00698 -0.04288 -0.10211"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_left_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__front_left_rocker_bogie_link">
+    <inertial>
+      <mass value="0.8445676376518956"/>
+      <origin rpy="0 0 0" xyz="0.05876 -0.01776  0.02115"/>
+      <inertia ixx="0.06277874581658051" ixy="-0.018225666823205547" ixz="-0.027993579038419338" iyy="0.0625707398780842" iyz="-0.027586336774433586" izz="0.04707546758213575"/>
+    </inertial>
+    <collision name="beetle__front_left_rocker_bogie_link_collision">
+      <origin rpy="0 0 0" xyz="0.05876 -0.01776  0.02115"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_left_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__front_left_rocker_bogie_link_visual">
+      <origin rpy="0 0 0" xyz="0.05876 -0.01776  0.02115"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_left_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__rear_left_rocker_bogie_link">
+    <inertial>
+      <mass value="0.909645424954701"/>
+      <origin rpy="0 0 0" xyz="0.00944 -0.01887 -0.02774"/>
+      <inertia ixx="0.08532861005297555" ixy="0.015169448278743778" ixz="-0.03760121707003846" iyy="0.08780317442619136" iyz="0.026524480712805516" izz="0.050332437137122966"/>
+    </inertial>
+    <collision name="beetle__rear_left_rocker_bogie_link_collision">
+      <origin rpy="0 0 0" xyz="0.00944 -0.01887 -0.02774"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_left_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__rear_left_rocker_bogie_link_visual">
+      <origin rpy="0 0 0" xyz="0.00944 -0.01887 -0.02774"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_left_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__rear_right_wheel_link">
+    <inertial>
+      <mass value="2.044451252660024"/>
+      <origin rpy="0 0 0" xyz="-0.00166 -0.007   -0.00127"/>
+      <inertia ixx="0.07469406824081799" ixy="-0.10184477562870979" ixz="0.025172793659822952" iyy="0.20232289121514832" iyz="0.04507241398756659" izz="0.2454185582224127"/>
+    </inertial>
+    <collision name="beetle__rear_right_wheel_link_collision">
+      <origin rpy="0 0 0" xyz="-0.00166 -0.007   -0.00127"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_right_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__rear_right_wheel_link_visual">
+      <origin rpy="0 0 0" xyz="-0.00166 -0.007   -0.00127"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_right_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__rear_right_corner_link">
+    <inertial>
+      <mass value="0.22101320819345527"/>
+      <origin rpy="0 0 0" xyz="0.00329  0.04288 -0.1023"/>
+      <inertia ixx="0.0075258022226623155" ixy="-0.007784747732583991" ixz="0.003342509432974542" iyy="0.023920791469126637" iyz="0.008275787660172139" izz="0.022995355900298334"/>
+    </inertial>
+    <collision name="beetle__rear_right_corner_link_collision">
+      <origin rpy="0 0 0" xyz="0.00329  0.04288 -0.1023"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_right_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__rear_right_corner_link_visual">
+      <origin rpy="0 0 0" xyz="0.00329  0.04288 -0.1023"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_right_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__center_right_wheel_link">
+    <inertial>
+      <mass value="2.044453107769063"/>
+      <origin rpy="0 0 0" xyz="-0.00162 -0.00699 -0.00133"/>
+      <inertia ixx="0.13884972412083063" ixy="0.007533798765844787" ixz="0.03670329151928735" iyy="0.020895725910412718" iyz="-0.0021654619527637217" izz="0.12815534858815897"/>
+    </inertial>
+    <collision name="beetle__center_right_wheel_link_collision">
+      <origin rpy="0 0 0" xyz="-0.00162 -0.00699 -0.00133"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/center_right_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__center_right_wheel_link_visual">
+      <origin rpy="0 0 0" xyz="-0.00162 -0.00699 -0.00133"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/center_right_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__front_right_wheel_link">
+    <inertial>
+      <mass value="2.0444530672746373"/>
+      <origin rpy="0 0 0" xyz="-0.00162 -0.007   -0.00133"/>
+      <inertia ixx="0.07458413517596313" ixy="0.10072628893577579" ixz="0.025057420807144456" iyy="0.19823386834617238" iyz="-0.0441435518299059" izz="0.24143958040629396"/>
+    </inertial>
+    <collision name="beetle__front_right_wheel_link_collision">
+      <origin rpy="0 0 0" xyz="-0.00162 -0.007   -0.00133"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_right_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__front_right_wheel_link_visual">
+      <origin rpy="0 0 0" xyz="-0.00162 -0.007   -0.00133"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_right_wheel_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__front_right_corner_link">
+    <inertial>
+      <mass value="0.22101736205093941"/>
+      <origin rpy="0 0 0" xyz="0.00698  0.04288 -0.10211"/>
+      <inertia ixx="0.0075029804517652956" ixy="0.0076454285383182625" ixz="0.0033328496534460656" iyy="0.02324015062981061" iyz="-0.008039273386966521" izz="0.02233780681326509"/>
+    </inertial>
+    <collision name="beetle__front_right_corner_link_collision">
+      <origin rpy="0 0 0" xyz="0.00698  0.04288 -0.10211"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_right_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__front_right_corner_link_visual">
+      <origin rpy="0 0 0" xyz="0.00698  0.04288 -0.10211"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_right_corner_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__front_right_rocker_bogie_link">
+    <inertial>
+      <mass value="0.8445809006011908"/>
+      <origin rpy="0 0 0" xyz="0.05876 0.01776 0.02115"/>
+      <inertia ixx="0.0627801473161565" ixy="0.01822631425280775" ixz="0.02799418809032146" iyy="0.06257288491107471" iyz="-0.027587399443392186" izz="0.0470769630960935"/>
+    </inertial>
+    <collision name="beetle__front_right_rocker_bogie_link_collision">
+      <origin rpy="0 0 0" xyz="0.05876 0.01776 0.02115"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_right_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__front_right_rocker_bogie_link_visual">
+      <origin rpy="0 0 0" xyz="0.05876 0.01776 0.02115"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/front_right_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__rear_right_rocker_bogie_link">
+    <inertial>
+      <mass value="0.909662036731427"/>
+      <origin rpy="0 0 0" xyz="0.00943  0.01887 -0.02774"/>
+      <inertia ixx="0.08533010423763508" ixy="-0.015170007379640263" ixz="0.037601862212452715" iyy="0.08780572228631979" iyz="0.02652559625120754" izz="0.050334217754120406"/>
+    </inertial>
+    <collision name="beetle__rear_right_rocker_bogie_link_collision">
+      <origin rpy="0 0 0" xyz="0.00943  0.01887 -0.02774"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_right_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__rear_right_rocker_bogie_link_visual">
+      <origin rpy="0 0 0" xyz="0.00943  0.01887 -0.02774"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/rear_right_rocker_bogie_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__camera_link">
+    <inertial>
+      <mass value="2.330581194890767"/>
+      <origin rpy="0 0 0" xyz="-0.00077  0.08055  0.01857"/>
+      <inertia ixx="1.5581916852701763" ixy="1.547810564267169e-06" ixz="-9.99668446917764e-05" iyy="1.5534372776785443" iyz="0.025679666342472138" izz="0.006221999741365755"/>
+    </inertial>
+    <collision name="beetle__camera_link_collision">
+      <origin rpy="0 0 0" xyz="-0.00077  0.08055  0.01857"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/camera_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__camera_link_visual">
+      <origin rpy="0 0 0" xyz="-0.00077  0.08055  0.01857"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/camera_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__camera_mast_link">
+    <inertial>
+      <mass value="3.1248105350339057"/>
+      <origin rpy="0 0 0" xyz="-0.01017  0       0.32336"/>
+      <inertia ixx="1.4164659310174033" ixy="5.7906490147450536e-08" ixz="-4.490232017620334e-06" iyy="1.4137891897013357" iyz="0.018603956680717276" izz="0.007776633228713614"/>
+    </inertial>
+    <collision name="beetle__camera_mast_link_collision">
+      <origin rpy="0 0 0" xyz="-0.01017  0       0.32336"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/camera_mast_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__camera_mast_link_visual">
+      <origin rpy="0 0 0" xyz="-0.01017  0       0.32336"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/camera_mast_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="beetle__base_link">
+    <inertial>
+      <mass value="2.914500428469798"/>
+      <origin rpy="0 0 0" xyz="-0.13448  0.00486  0.29883"/>
+      <inertia ixx="0.282551972755833" ixy="0.0035710968000186223" ixz="-0.0037509260143349424" iyy="0.3606061435533601" iyz="0.11070144422781696" izz="0.10756603542751796"/>
+    </inertial>
+    <collision name="beetle__base_link_collision">
+      <origin rpy="0 0 0" xyz="-0.13448  0.00486  0.29883"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <visual name="beetle__base_link_visual">
+      <origin rpy="0 0 0" xyz="-0.13448  0.00486  0.29883"/>
+      <geometry>
+        <mesh filename="package://beetle_sim_description/meshes/CAD/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <!-- IMU Link.-->
+  <link name="beetle__imu_link"/>
+  <joint name="beetle__imu_joint" type="fixed">
+    <origin xyz="-0.12374  -0.0937  0.33771" rpy="1.5707 3.14 0" />
+    <parent link="beetle__base_link" />
+    <child link="beetle__imu_link" />
+  </joint>
+  <gazebo reference="beetle__imu_link"></gazebo>
+  <gazebo>
+	<plugin name="gazebo_drive_plugin" filename="libgazebo_drive_plugin.so">
+	<activate_pid_control>yes</activate_pid_control>                
+	<wheel_kp>0.1</wheel_kp>
+	<wheel_ki>0.1</wheel_ki>
+	<wheel_kd>0.0</wheel_kd>
+	<Cornerwheel_kp>0.1</Cornerwheel_kp>
+	<Cornerwheel_ki>0.1</Cornerwheel_ki>
+	<Cornerwheel_kd>0.0</Cornerwheel_kd></plugin>
+  </gazebo>
+
+
+<gazebo reference="beetle__rear_right_wheel_link">
+			<mu1 value="1.0"/>
+			<mu2 value="1.0"/>
+			<kp value="10000000.0" />
+			<kd value="1.0" />
+			<fdir1 value="1 0 0"/>
+		</gazebo>
+
+<gazebo reference="beetle__rear_left_wheel_link">
+			<mu1 value="1.0"/>
+			<mu2 value="1.0"/>
+			<kp value="10000000.0" />
+			<kd value="1.0" />
+			<fdir1 value="1 0 0"/>
+		</gazebo>
+
+<gazebo reference="beetle__front_right_wheel_link">
+			<mu1 value="1.0"/>
+			<mu2 value="1.0"/>
+			<kp value="10000000.0" />
+			<kd value="1.0" />
+			<fdir1 value="1 0 0"/>
+		</gazebo>
+
+<gazebo reference="beetle__front_left_wheel_link">
+			<mu1 value="1.0"/>
+			<mu2 value="1.0"/>
+			<kp value="10000000.0" />
+			<kd value="1.0" />
+			<fdir1 value="1 0 0"/>
+		</gazebo>
+
+<gazebo reference="beetle__center_right_wheel_link">
+			<mu1 value="1.0"/>
+			<mu2 value="1.0"/>
+			<kp value="10000000.0" />
+			<kd value="1.0" />
+			<fdir1 value="1 0 0"/>
+		</gazebo>
+
+<gazebo reference="beetle__center_left_wheel_link">
+			<mu1 value="1.0"/>
+			<mu2 value="1.0"/>
+			<kp value="10000000.0" />
+			<kd value="1.0" />
+			<fdir1 value="1 0 0"/>
+		</gazebo>
+</robot>
