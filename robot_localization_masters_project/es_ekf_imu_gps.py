@@ -34,17 +34,38 @@ ground_truth = pd.read_csv("CSVFiles/ground_truth.csv")
 imu = pd.read_csv("CSVFiles/imu_data.csv")
 gps = pd.read_csv("CSVFiles/gps_fix.csv")
 
+R = rpy_to_mat(0.0, -1.5708, 3.1416 )
+T = np.array([[0.19, 0.0, 0.149]])
+
+TF = np.concatenate((R, T.T), axis=1)
+Homogeneous_TF = np.concatenate((TF, np.array([[0, 0, 0, 1]])), axis=0)
+
 #Acceleration components loaded to dataframe imu_f i.e imu_forces from imu topic imu_data.csv file.
 imu_f = pd.DataFrame(columns=['acc_x', 'acc_y', 'acc_z'])
-imu_f['acc_x'] = imu['.linear_acceleration.x']
-imu_f['acc_y'] = imu['.linear_acceleration.y']
-imu_f['acc_z'] = imu['.linear_acceleration.z']
+imu_f['acc_y'] = imu['.linear_acceleration.x']
+imu_f['acc_x'] = imu['.linear_acceleration.y']
+imu_f['acc_z'] = -imu['.linear_acceleration.z']
+#imu_f['w'] = np.ones(np.shape(imu_f.shape[0]))
+
+print(imu_f.iloc[0])
+
+"""
+a = np.array([1])
+for k in range(0, imu_f.shape[0]):
+    x = np.concatenate((imu_f.iloc[k], a), axis=0)
+    y = Homogeneous_TF @ x
+    imu_f.iloc[k] = y[0:3]
+
+print(imu_f.iloc[0])
+"""
 
 #Angular velocity components loaded to dataframe imu_w ie imu_angular from imu ros topic imu_data.csv file
 imu_w = pd.DataFrame(columns=['ang_vel_x', 'ang_vel_y', 'ang_vel_z'])
-imu_w['ang_vel_x'] = imu['.angular_velocity.x']
-imu_w['ang_vel_y'] = imu['.angular_velocity.y']
-imu_w['ang_vel_z'] = imu['.angular_velocity.z']
+imu_w['ang_vel_y'] = imu['.angular_velocity.x']
+imu_w['ang_vel_x'] = imu['.angular_velocity.y']
+imu_w['ang_vel_z'] = -imu['.angular_velocity.z']
+
+#imu_w = Homogeneous_TF @ imu_w 
 
 #save time of Imu data
 imu_time = imu['time']
@@ -66,9 +87,10 @@ var_imu_w = 10
 var_gnss  = 2
 """
 
-var_imu_f = 0
+var_imu_f = 0.01
 var_imu_w = 0.01
-var_gnss  = 5
+var_gnss  = 2
+
 
 #Constants
 
@@ -120,6 +142,7 @@ gps_noise_cov[:, 3:6] = np.eye(3) * 999999
 gps_noise_cov[:, 6:9] = np.eye(3) * 999999
 """
 
+
 ########## Measurement Update ############################################################
 def measurement_update(sensor_var, p_cov_check, y_k, p_check, v_check, q_check):
     X_gps.append(y_k[0])
@@ -139,6 +162,12 @@ def measurement_update(sensor_var, p_cov_check, y_k, p_check, v_check, q_check):
     p_hat = p_check + Error_state[0:3]
     #print('Position estimates: ', p_hat)
 
+    #a = np.array([1])
+
+    #p_hat = Homogeneous_TF @ np.concatenate((p_hat, a), axis=0)
+
+    #p_hat = p_hat[0:3]
+    
     v_hat = v_check + Error_state[3:6]
     #print('Velocity estimates: ', v_hat)
 
@@ -157,6 +186,16 @@ for k in range(1, imu_f.shape[0]):  # start at 1 b/c we have initial prediction 
     delta_t = ros_time_diff(imu_time[k], imu_time[k - 1])
 
     # 1. Update state with IMU inputs
+    """
+    a = np.array([1])
+    x = np.concatenate((imu_f.iloc[k-1], a), axis=0)
+    y = Homogeneous_TF @ x
+    imu_f.iloc[k-1] = y[0:3]
+
+    x = np.concatenate((imu_w.iloc[k-1], a), axis=0)
+    y = Homogeneous_TF @ x
+    imu_w.iloc[k-1] = y[0:3]
+    """
     p = p_est[k-1]
     v = v_est[k-1]
     q = q_est[k-1]
@@ -192,9 +231,9 @@ for k in range(1, imu_f.shape[0]):  # start at 1 b/c we have initial prediction 
 
     utc_current_timestamp = imu_time_utm[k]
 
-    
-    #if prev_timestamp!= utc_current_timestamp and utc_current_timestamp in time_utc_gps:
-    if utc_current_timestamp in time_utc_gps:
+    """
+    if prev_timestamp!= utc_current_timestamp and utc_current_timestamp in time_utc_gps:
+    #if utc_current_timestamp in time_utc_gps:
         prev_timestamp = utc_current_timestamp
         gps_index = time_utc_gps.index(utc_current_timestamp)
         utm_co = (utm.from_latlon(gps_lat[gps_index], gps_lon[gps_index]))
@@ -207,8 +246,8 @@ for k in range(1, imu_f.shape[0]):  # start at 1 b/c we have initial prediction 
             counter = 0
         #error_in_estimation.append(np.sqrt((ground_truth['Easting'][groundtruth_index]-X_check[0])**2+(ground_truth['Northing'][groundtruth_index]-X_check[1])**2))
         #error_in_GPS.append(np.sqrt((ground_truth['Easting'][groundtruth_index]-utm_co[0])**2+(ground_truth['Northing'][groundtruth_index]-utm_co[1])**2))
-
-
+    """
+    
     # Update states (save)
     p_est[k] = p_check
     v_est[k] = v_check

@@ -1,5 +1,10 @@
 # Utitlity file with functions for handling rotations.
 import numpy as np
+from scipy.spatial.transform import Rotation as R
+
+def rpy_to_mat(r, p, y):
+    r = R.from_euler('zyx', [y, p, r], degrees=False)
+    return r.as_matrix()
 
 def angle_normalize(a):
     """Normalize angles to lie in range -pi < a[i] <= pi."""
